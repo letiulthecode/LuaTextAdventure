@@ -9,7 +9,7 @@ else
 end
 
 while sw1 do
-    os.execute('cls')
+    clear()
     Color.print(Color.start..Color.brg.white..'Welcome to '..Color.start..Color.brg.cyan.."LuaTextJourney! (Beta)"..Color.start)
     print(Color.start.."eHow you will start?\n1:New Game\n"..Color.start..Color.brg.black.."2:Countinue"..Color.start..Color.sty.reset.."\n3:Exit")
     io.write('>')

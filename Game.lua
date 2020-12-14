@@ -4,33 +4,42 @@ local Extra = require('Files/Extra')
 local sw1 = true
 if os.getos() == 'Windows' then
     os.execute('title Lua Text Adventure')
-else
-    print('Unix system detected, disable title function')
 end
-
 while sw1 do
     clear()
     Color.print(Color.start..Color.brg.white..'Welcome to '..Color.start..Color.brg.cyan.."LuaTextJourney! (Beta)"..Color.start)
-    print(Color.start.."eHow you will start?\n1:New Game\n"..Color.start..Color.brg.black.."2:Countinue"..Color.start..Color.sty.reset.."\n3:Exit")
+    print(Color.start.."eHow you will start?\n1:New Game\n"..Color.start..Color.brg.black.."2:Countinue"..Color.start..Color.sty.reset.."\n3:Exit\n"..'4-Options(select if you are a linux/mac user)')
     io.write('>')
     local e = io.read()
+    if e == '4' then
+      if LowEnd == false then
+         print('1- ( ) Low-End mode (recommended for linux/mac)')
+      else
+         print('1- (X) Low-End mode (recommended for linux/mac)')
+      end
+      local b = io.write('>') and io.read()
+      if b == '1' then
+         if LowEnd == false then LowEnd = true 
+         elseif LowEnd == true then LowEnd = false end
+         b = false
+      end
+    end
     if e == '1' then
        io.write("Insert Character Name:")
        local Name = io.read()
-       io.write("'"..Name.."', this name is correct? (y/n):")
+       io.write("'"..Name.."', this name is correct? (Y/N):")
        local Confirm = io.read()
        if Confirm == 'y' then
         clear()
         sw1 = false
-        
         local scene1 = true
         while scene1 do
-        clear()
-        Report('???', 'Hello? Anyone here?')
-        sleep(3)
-        Report('???', 'Whatever, if someone is here. Please help me')
-        sleep(3)
-        print(Name.." has woken up.")
+            clear()
+            Report('???', 'Hello? Anyone here?')
+            sleep(3)
+            Report('???', 'Whatever, if someone is here. Please help me')
+            sleep(3)
+            print(Name.." has woken up.")
             break
         end
                local sw2 = true

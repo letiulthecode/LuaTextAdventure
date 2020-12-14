@@ -2,7 +2,11 @@ local Color = require('Files/Color')
 local Util = require('Files/Util')
 local Extra = require('Files/Extra')
 local sw1 = true
-os.execute('title Lua Text Adventure') --if you are linux or mac user delete this
+if os.getos() == 'Windows' then
+    os.execute('title Lua Text Adventure')
+else
+    print('Unix system detected, disable title function')
+end
 
 while sw1 do
     os.execute('cls')

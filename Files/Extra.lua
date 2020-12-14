@@ -17,3 +17,6 @@ Enemies = {
 La = false
 Check = false
 Follow = false
+
+--Config
+LowEnd = false

@@ -17,7 +17,7 @@ while sw1 do
     if e == '1' then
        io.write("Insert Character Name:")
        local Name = io.read()
-       io.write("'"..Name.."', this name is correct? (Y/N):")
+       io.write("'"..Name.."', this name is correct? (y/n):")
        local Confirm = io.read()
        if Confirm == 'y' then
         clear()

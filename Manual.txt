@@ -1,0 +1,5 @@
+/clear clears the screen
+
+in the start of the game, talk "look around"
+
+if you want hints repeat the last command you made

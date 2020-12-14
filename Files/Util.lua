@@ -24,7 +24,5 @@ function sleep(a)
       else
          os.execute('ping -n '.. a ..' localhost > /dev/null')
       end
-    else
-       assert(false ,"Attempt to call "..type(a).." instead of an number value")
     end
 end

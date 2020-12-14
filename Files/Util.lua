@@ -22,7 +22,7 @@ function sleep(a)
       if os.getos() == 'Windows' then
         os.execute("ping -n " .. a .. " localhost > NUL")
       else
-         os.execute('ping -n '.. a ..' localhost > /dev/null')
+         os.execute('sleep '..a)
       end
     end
 end

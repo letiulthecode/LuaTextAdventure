@@ -1,6 +1,17 @@
+local MetaData = require('Files/Extra')
+
 function clear()
-   if os.getenv("OS") == 'Windows_NT' then os.execute('cls')
-   else os.execute('clear') end
+   if LowEnd == true then
+      for i=1, 25 do
+          print('\n\n')
+      end
+   else
+      if os.getos() == 'Unix' then
+         os.execute('clear')
+      end
+      os.execute('cls')
+   end
+   
 end
 
 function Report(pname, msg)
@@ -26,3 +37,4 @@ function sleep(a)
       end
     end
 end
+
